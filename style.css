@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(210deg, #b18ce8 0%, #636231 80%)
+   
+}
+
+.header{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6rem;
+    color: white;
+    background-color: rgb(16, 6, 6);
+    box-shadow:5px 8px 25px yellow;
+    position: relative;
+    z-index: 5;
+}
+.head1{
+    font-size: 2.5em;
+}
+span{
+    font-weight: 100;
+}
+.head2{
+    font-size: 2em;
+    display: flex;
+    align-items: end;
+}
+.head1,.head2{
+    display: flex;
+    gap: 10px;
+}
+p{
+    font-size: 2em;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.popup_card,.popup_Task{
+    width: 380px;
+    height: 200px;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 6;
+   
+}
+
+
+.blur{
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    z-index: 5;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+}
+.hidden{
+    display: none;
+}
+#btnBack{
+    display: none;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 22px;
+}
+.input{
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    font-family: cursive;
+    border-radius: 8px;
+}
+.card_buttons{
+    display: flex;
+    gap: 20px;
+}
+.btn1,.btn2,.btn3,.btn4{
+    width: 100px;
+    height: 40px;
+    border: none;
+    font-size: 22px;
+    border-radius: 20px;
+    background-color: rgb(255, 77, 12);
+    color: white;
+}
+.head2,.btn1,.btn2,button:hover{
+    cursor: pointer;
+}
+.main_container{
+    position: relative;
+    height: 100vh;
+    background: #d4cfa600;
+}
+.card_container{
+    width: 100%;
+    height: 86vh;
+    margin-top: 15px;
+    padding: 2em 6em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    overflow-y: auto;
+}
+.title{
+    font-family: sans-serif;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(243, 243, 209);
+    border-radius: 10px 10px 0px 0px;
+}
+.card{
+    width: 250px;
+    height: 300px;
+    background: rgb(233, 242, 135);
+    border: 1px solid rgb(144, 144, 144);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    position: relative;
+}
+
+h3{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 1.6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 5px 15px;
+    position: absolute;
+}
+.delete,.add{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(67, 61, 239);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(243, 90, 90, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+.task_lists{
+    height: 215px;
+    overflow-y: auto;
+}
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    margin-top: 5px;
+    gap: 10px;
+}
+.mark{
+    background-color: rgba(36, 36, 240, 0.925);
+    color: white;
+    border-radius: 5px;
+    padding: 0 3px;
+}
+.taskDone{
+    text-decoration: line-through;
+    font-weight: bold;
+    color: tomato;
+    width: 100%;
+    text-align: center;
+}
+.singleCard_container{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(147deg, #a399b2 0%, #4d4855 74%);;
+    z-index: 3;
+}
+.singleCard{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-65%);
+    z-index: 4;
+}
+#singleCardHeading{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%,-16%);
+    font-size: 50px;
+}
+.fa-solid,button:hover{
+    cursor: pointer;
+}
+@media screen and (max-width:700px) {
+    .head1{
+        font-size: 1.5rem;
+    }
+    .head2{
+        font-size: 1.2rem;
+    }
+    .header{
+        padding: 0 2.5rem;
+    }
+    p{
+        font-size: 1em;
+    }
+    .popup_card,.popup_Task,.input{
+        width: 70%;
+    }
+    .btn1,.btn2,.btn3{
+        width: 60px;
+        height: 40px;
+        font-size: 1em;
+    }
+    #btnBack{
+        width: 45px;
+        height: 30px;
+        font-size: 1em;
+    }
+    .mark{
+        padding: 0 2px;
+    }
+    .card_container{
+        padding: 0 2em 3em 2em;
+        justify-content: center;
+    }
+    .card{
+        width: 14rem;
+        height: 16rem;
+    }
+    .buttons{
+        bottom: 2px;
+    }
+    .task_lists{
+        height: 10.5rem;
+    }
+}
